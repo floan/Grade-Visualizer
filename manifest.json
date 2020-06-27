@@ -5,7 +5,7 @@
   "content_scripts" : [
   	{
   		"matches" : [
-  			"*://*.ratemyprofessors.com/*"
+  			"*://*.ratemyprofessors.com/*" //This indicates that the extension only works with ratemyprof pages
   		],
   		"js": ["content.js"]
   	}
