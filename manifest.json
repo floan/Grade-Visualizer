@@ -5,9 +5,16 @@
   "content_scripts" : [
   	{
   		"matches" : [
-  			"<all_urls>"
+  			"*://*.ratemyprofessors.com/*"
   		],
   		"js": ["content.js"]
   	}
-  ]
+  ],
+  "background": {
+  	"scripts": ["background.js"]
+  },
+  "browser_action" : {
+  	"default_icon": "xyz.png"
+  }
+  
 }

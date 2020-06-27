@@ -1,7 +1,5 @@
 console.log("Chrome Extension Ready to Go!")
 
-const courseChoice = document.getElementsByClassName("  css-n2irg-placeholder")[0].textContent;
-let config = { characterData: true };
 let gradeArray = [];
 
 const getGrades = () =>{
@@ -16,5 +14,10 @@ const getGrades = () =>{
 	console.log('Function is called!!!')
 }
 
+const gotMessage = (message, sender, sendResponse) => {
+	if(message === "execute"){
+		getGrades(); 
+	}
+}
 
-getGrades(); 
+chrome.runtime.onMessage.addListener(gotMessage);
