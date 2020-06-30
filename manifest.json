@@ -14,7 +14,9 @@
   	"scripts": ["background.js"]
   },
   "browser_action" : {
-  	"default_icon": "xyz.png"
-  }
+  	"default_icon": "xyz.png",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js; object-src 'self'"
   
 }

@@ -1,5 +1,3 @@
-console.log("Chrome Extension Ready to Go!")
-
 let gradeArray = []; //Initializing an array to store the grades
 
 const getGrades = () =>{ //Function to get grades from comments using the DOM
@@ -11,7 +9,6 @@ const getGrades = () =>{ //Function to get grades from comments using the DOM
 		}
 	}
 	console.log(gradeArray);
-	console.log('Function is called!!!')
 }
 
 const gotMessage = (message, sender, sendResponse) => {
@@ -21,3 +18,4 @@ const gotMessage = (message, sender, sendResponse) => {
 }
 
 chrome.runtime.onMessage.addListener(gotMessage); //Calls the gotMessage function when the listener detects a message
+
