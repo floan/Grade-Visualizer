@@ -14,6 +14,7 @@ const getGrades = () =>{ //Function to get grades from comments using the DOM
 const gotMessage = (message, sender, sendResponse) => {
 	if(message === "execute"){ //Function is only called when the button is pressed
 		getGrades(); 
+		chrome.runtime.sendMessage({text: "data", info: gradeArray});
 	}
 }
 
