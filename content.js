@@ -8,13 +8,12 @@ const getGrades = () =>{ //Function to get grades from comments using the DOM
 			gradeArray.push(ratingBox[i].children[0].textContent);
 		}
 	}
-	console.log(gradeArray);
 }
 
 const gotMessage = (message, sender, sendResponse) => {
 	if(message === "execute"){ //Function is only called when the button is pressed
 		getGrades(); 
-		chrome.runtime.sendMessage({text: "data", info: gradeArray});
+		chrome.runtime.sendMessage({text: "data", info: gradeArray}); //Sending the gathered info to the popup file
 	}
 }
 
