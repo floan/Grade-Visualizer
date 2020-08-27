@@ -1,7 +1,7 @@
 let gradeArray = []; //Initializing an array to store the grades
 
 const getGrades = () =>{ //Function to get grades from comments using the DOM
-	let ratingBox = document.getElementsByClassName('MetaItem__StyledMetaItem-y0ixml-0 bxqwYh');
+	let ratingBox = document.getElementsByClassName('MetaItem__StyledMetaItem-y0ixml-0');
 	gradeArray = [];
 	for(let i=0; i<ratingBox.length; i++){
 		if(ratingBox[i].textContent.includes('Grade')){
